@@ -1,10 +1,17 @@
 # 🔌 Port Watcher
 
+[![Platform](https://img.shields.io/badge/platform-Windows-0078D6?logo=windows)](https://github.com/HafezHammamy/port-watcher)
+[![Built with Electron](https://img.shields.io/badge/built%20with-Electron-47848F?logo=electron&logoColor=white)](https://www.electronjs.org/)
+[![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
+
 A simple, fast desktop app for Windows to **watch, search, and kill** processes by the network ports they use. Built with [Electron](https://www.electronjs.org/).
 
-Ever had `Error: listen EADDRINUSE: address already in use :::3000`? Open Port Watcher, search `3000`, and kill it — no more hunting through `netstat` and `taskkill`.
+> Ever hit `Error: listen EADDRINUSE: address already in use :::3000`? Open Port Watcher, type `3000`, and kill it — no more hunting through `netstat` and `taskkill`.
 
-![Port Watcher](docs/screenshot.png)
+![Port Watcher screenshot](docs/screenshot.png)
+
+> 💖 If this saved you some time, consider [starring the repo](https://github.com/HafezHammamy/port-watcher) — it really helps!
 
 ## ✨ Features
 
