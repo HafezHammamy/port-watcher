@@ -45,6 +45,10 @@ function render() {
   rowsEl.innerHTML = '';
   for (const r of filtered) {
     const tr = document.createElement('tr');
+    const killable = Number(r.pid) > 0;
+    const killCell = killable
+      ? `<button class="kill" data-pid="${r.pid}" data-proc="${escapeAttr(r.process || '')}">Kill</button>`
+      : `<span class="pid" title="No owning process (${escapeAttr(r.state || 'no PID')})">—</span>`;
     tr.innerHTML = `
       <td class="proto">${r.proto}</td>
       <td class="mono">${escapeHtml(r.local)}</td>
@@ -52,7 +56,7 @@ function render() {
       <td>${escapeHtml(r.state || '')}</td>
       <td>${escapeHtml(r.process || '—')}</td>
       <td class="pid">${r.pid}</td>
-      <td><button class="kill" data-pid="${r.pid}" data-proc="${escapeAttr(r.process || '')}">Kill</button></td>
+      <td>${killCell}</td>
     `;
     rowsEl.appendChild(tr);
   }
